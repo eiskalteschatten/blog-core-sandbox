@@ -5,4 +5,7 @@ declare(strict_types=1);
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-BlogCore\Commands\BuildIndexCommand::main($argv);
+use BlogCore\Commands\BuildIndexCommand;
+use Sandbox\Config\BlogConfig;
+
+BuildIndexCommand::run(new BlogConfig(), $argv);
