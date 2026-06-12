@@ -21,6 +21,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "build-index": "php bin/build_index.php"
+        "build-index": "php bin/build_index.php",
+        "process-images": "php bin/process_images.php"
     }
 }

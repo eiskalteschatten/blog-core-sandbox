@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "../blog-core",
-                "reference": "83ca371b0560a5d6ef96c0ae1f41b62911ed47cf"
+                "reference": "01b18ab35302066e45797f0bf58b9133c288097a"
             },
             "require": {
                 "erusev/parsedown": "^1.7",
