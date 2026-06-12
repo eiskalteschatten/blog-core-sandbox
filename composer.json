@@ -23,6 +23,7 @@
     "scripts": {
         "build-index": "php bin/build_index.php",
         "process-images": "php bin/process_images.php",
-        "publish-assets": "php bin/publish_assets.php"
+        "publish-assets": "php bin/publish_assets.php",
+        "import-wordpress": "php bin/import_wordpress.php"
     }
 }
