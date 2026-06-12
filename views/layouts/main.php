@@ -113,7 +113,7 @@
         /* Meta line */
         .meta { color: #6c757d; font-size: 0.85rem; margin-bottom: 0.5rem; }
     </style>
-    <link rel="alternate" type="application/rss+xml" title="<?= htmlspecialchars($config->getSiteTitle()) ?>" href="<?= htmlspecialchars($config->getSiteUrl()) ?>/feeds/posts.xml">
+    <link rel="alternate" type="application/rss+xml" title="<?= htmlspecialchars($config->getSiteTitle()) ?>" href="<?= htmlspecialchars($config->getSiteUrl()) ?>/feed.xml">
 </head>
 <body>
     <header>
@@ -131,7 +131,7 @@
     <footer>
         &copy; <?= date('Y') ?> <?= htmlspecialchars($config->getSiteTitle()) ?>
         &nbsp;&middot;&nbsp;
-        <a href="/feeds/posts.xml">RSS Feed</a>
+        <a href="/feed.xml">RSS Feed</a>
         &nbsp;&middot;&nbsp;
         <a href="/sitemap.xml">Sitemap</a>
     </footer>

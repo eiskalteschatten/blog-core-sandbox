@@ -2,3 +2,4 @@
 /.env
 *.log
 public/sitemap.xml
+public/feed.xml
