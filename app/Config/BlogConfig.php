@@ -52,11 +52,6 @@ class BlogConfig extends Config
         return $this->rootDir . '/public';
     }
 
-    public function getPostsPerPage(): int
-    {
-        return 10;
-    }
-
     public function getStaticPages(): array
     {
         return [
