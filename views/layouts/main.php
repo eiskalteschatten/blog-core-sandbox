@@ -7,7 +7,10 @@
 
     <link rel="alternate" type="application/rss+xml" title="<?= htmlspecialchars($config->getSiteTitle()) ?>" href="<?= htmlspecialchars($config->getSiteUrl()) ?>/feed.xml">
 
-    <script src="/blog-core/js/index.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/blog-core/css/image-carousel.css">
+
+    <script src="/blog-core/scripts/image-carousel/index.js" defer></script>
 </head>
 <body>
     <header>
