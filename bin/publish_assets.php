@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+
+use BlogCore\Commands\PublishAssetsCommand;
+use Sandbox\Config\BlogConfig;
+
+PublishAssetsCommand::run(new BlogConfig(), $argv);
+echo "Done." . PHP_EOL;

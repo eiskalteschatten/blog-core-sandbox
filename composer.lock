@@ -12,11 +12,14 @@
             "dist": {
                 "type": "path",
                 "url": "../blog-core",
-                "reference": "01b18ab35302066e45797f0bf58b9133c288097a"
+                "reference": "99b36d9a6a5c671eb8e27458cd18d42a7786c239"
             },
             "require": {
                 "erusev/parsedown": "^1.7",
                 "php": ">=8.1"
+            },
+            "suggest": {
+                "ext-imagick": "Required for automatic post image resizing and WebP conversion."
             },
             "bin": [
                 "bin/blog-core-build"
