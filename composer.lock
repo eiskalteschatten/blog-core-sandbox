@@ -12,12 +12,15 @@
             "dist": {
                 "type": "path",
                 "url": "../blog-core",
-                "reference": "b289292d9b6841c539f25322b505cbd976960f96"
+                "reference": "83ca371b0560a5d6ef96c0ae1f41b62911ed47cf"
             },
             "require": {
                 "erusev/parsedown": "^1.7",
                 "php": ">=8.1"
             },
+            "bin": [
+                "bin/blog-core-build"
+            ],
             "type": "library",
             "autoload": {
                 "psr-4": {
