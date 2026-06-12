@@ -47,6 +47,11 @@ class BlogConfig extends Config
         return $this->rootDir . '/views';
     }
 
+    public function getPublicDir(): string
+    {
+        return $this->rootDir . '/public';
+    }
+
     public function getPostsPerPage(): int
     {
         return 10;
