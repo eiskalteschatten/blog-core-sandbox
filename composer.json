@@ -1,0 +1,23 @@
+{
+    "name": "alexseifert/blog-core-sandbox",
+    "description": "A sandbox host app for developing and testing the blog-core package",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "alexseifert/blog-core": "*"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../blog-core"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sandbox\\": "app/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
