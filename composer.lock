@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "../blog-core",
-                "reference": "88b8b17f45e2aa0eb2907474da9a62c308b12975"
+                "reference": "5ceb9ef87e84cfe97398469005c2164e8af142be"
             },
             "require": {
                 "php": ">=8.1"
@@ -21,7 +21,10 @@
             "autoload": {
                 "psr-4": {
                     "BlogCore\\": "src/"
-                }
+                },
+                "files": [
+                    "src/lib/Parsedown.php"
+                ]
             },
             "license": [
                 "MIT"

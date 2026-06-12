@@ -1,0 +1,11 @@
+{
+    "title": "Getting Started",
+    "slug": "getting-started",
+    "description": "A second example post to demonstrate pagination and category filtering.",
+    "image": null,
+    "tags": ["PHP", "Tutorial"],
+    "categories": ["general"],
+    "featured": true,
+    "draft": false,
+    "publishedAt": "2026-06-10T09:00:00"
+}

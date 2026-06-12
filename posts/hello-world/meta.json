@@ -1,0 +1,11 @@
+{
+    "title": "Hello World",
+    "slug": "hello-world",
+    "description": "My very first post using the blog-core package.",
+    "image": null,
+    "tags": ["PHP", "Blog", "Hello"],
+    "categories": ["general"],
+    "featured": false,
+    "draft": false,
+    "publishedAt": "2026-06-12T10:00:00"
+}
