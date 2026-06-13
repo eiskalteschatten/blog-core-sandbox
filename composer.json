@@ -21,6 +21,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+        "dev": "php -S localhost:8000 -t public",
         "build-index": "php bin/build_index.php",
         "process-images": "php bin/process_images.php",
         "publish-assets": "php bin/publish_assets.php",
