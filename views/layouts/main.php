@@ -10,7 +10,17 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/blog-core/css/image-carousel.css">
 
-    <script src="/blog-core/scripts/image-carousel/index.js" defer></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "./image-carousel.js": "/blog-core/scripts/image-carousel/image-carousel.js",
+            "./image-carousel-nav-button.js": "/blog-core/scripts/image-carousel/image-carousel-nav-button.js",
+            "./image-carousel-lightbox-button.js": "/blog-core/scripts/image-carousel/image-carousel-lightbox-button.js",
+            "./light-box.js": "/blog-core/scripts/image-carousel/light-box.js"
+        }
+    }
+    </script>
+    <script src="/blog-core/scripts/image-carousel/index.js" type="module"></script>
 </head>
 <body>
     <header>
