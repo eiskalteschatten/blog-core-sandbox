@@ -31,6 +31,7 @@
         <a href="/posts">Posts</a>
         <a href="/categories">Categories</a>
         <a href="/tags">Tags</a>
+        <a href="/search">Search</a>
     </nav>
     <main>
         <?= $pageContent ?>
