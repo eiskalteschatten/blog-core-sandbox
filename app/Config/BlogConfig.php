@@ -52,6 +52,11 @@ class BlogConfig extends Config
         return $this->rootDir . '/public';
     }
 
+    public function getOriginalPostImagesDir(): string
+    {
+        return $this->rootDir . '/media-originals/posts';
+    }
+
     public function getStaticPages(): array
     {
         return [
