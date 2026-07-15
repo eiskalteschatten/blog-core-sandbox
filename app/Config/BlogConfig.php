@@ -58,4 +58,9 @@ class BlogConfig extends Config
             ['loc' => '/', 'changefreq' => 'daily', 'priority' => '1.0'],
         ];
     }
+
+    public function enableLegacyWordPressDateRedirects(): bool
+    {
+        return true;
+    }
 }
