@@ -1,6 +1,28 @@
 Options -Indexes
 RewriteEngine On
 
+# WordPress-style pagination paths
+RewriteRule ^page/([0-9]+)/?$ /posts/?page=$1 [R=301,L,NC,QSA]
+RewriteRule ^posts/page/([0-9]+)/?$ /posts/?page=$1 [R=301,L,NC,QSA]
+RewriteRule ^categories/page/([0-9]+)/?$ /categories/?page=$1 [R=301,L,NC,QSA]
+RewriteRule ^categories/([^/]+)/page/([0-9]+)/?$ /categories/$1/?page=$2 [R=301,L,NC,QSA]
+RewriteRule ^tags/page/([0-9]+)/?$ /tags/?page=$1 [R=301,L,NC,QSA]
+RewriteRule ^tags/([^/]+)/page/([0-9]+)/?$ /tags/$1/?page=$2 [R=301,L,NC,QSA]
+RewriteRule ^category/[^/]+/([^/]+)/page/([0-9]+)/?$ /categories/$1/?page=$2 [R=301,L,NC,QSA]
+RewriteRule ^category/([^/]+)/page/([0-9]+)/?$ /categories/$1/?page=$2 [R=301,L,NC,QSA]
+RewriteRule ^tag/([^/]+)/page/([0-9]+)/?$ /tags/$1/?page=$2 [R=301,L,NC,QSA]
+
+# Redirects for WordPress routes
+RewriteRule ^category/[^/]+/([^/]+)/?$ /categories/$1/ [R=301,L,NC]
+RewriteRule ^category/([^/]+)/?$ /categories/$1/ [R=301,L,NC]
+RewriteRule ^tag/(.+?)/?$ /tags/$1/ [R=301,L,NC]
+RewriteRule ^feed/?$ /feed.xml [R=301,L,NC]
+
+# Canonical trailing slash for route paths (skip file-like paths)
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.[^./]+$ [NC]
+RewriteRule ^(.+)$ /$1/ [R=301,L]
+
 # Serve existing files and directories directly
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
