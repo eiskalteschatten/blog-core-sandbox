@@ -59,8 +59,4 @@ class BlogConfig extends Config
         ];
     }
 
-    public function enableLegacyWordPressDateRedirects(): bool
-    {
-        return true;
-    }
 }

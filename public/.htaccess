@@ -13,6 +13,7 @@ RewriteRule ^category/([^/]+)/page/([0-9]+)/?$ /categories/$1/?page=$2 [R=301,L,
 RewriteRule ^tag/([^/]+)/page/([0-9]+)/?$ /tags/$1/?page=$2 [R=301,L,NC,QSA]
 
 # Redirects for WordPress routes
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/([^/]+)/?$ /posts/$4/ [R=301,L,NC]
 RewriteRule ^category/[^/]+/([^/]+)/?$ /categories/$1/ [R=301,L,NC]
 RewriteRule ^category/([^/]+)/?$ /categories/$1/ [R=301,L,NC]
 RewriteRule ^tag/(.+?)/?$ /tags/$1/ [R=301,L,NC]
