@@ -13,6 +13,7 @@ All commands are run from the project root.
 | `php bin/publish_assets.php` | Creates a symlink from `public/blog-core` to the core package's `assets/` directory. Pass `-v` for verbose output. |
 | `bin/rsync_media_originals.sh <user@host:/path/to/media-originals/posts/> [--apply]` | Syncs local media originals to a server with `rsync` (dry-run by default). |
 | `bin/rsync_processed_images.sh <user@host:/path/to/public/images/posts/> [--apply]` | Syncs processed WebP images to a server with `rsync` (dry-run by default). |
+| `bin/process_rsync_images.sh --originals <user@host:/path/to/media-originals/posts/> --processed <user@host:/path/to/public/images/posts/> [--apply] [--skip-process]` | Runs image processing, then syncs originals and processed images in one command. |
 
 ## Media Originals
 
@@ -37,3 +38,18 @@ You can do the same for processed images:
 bin/rsync_processed_images.sh deploy@example.com:/var/www/blog/public/images/posts/
 bin/rsync_processed_images.sh deploy@example.com:/var/www/blog/public/images/posts/ --apply
 ```
+
+Or run processing + both syncs in one shortcut:
+
+```bash
+bin/process_rsync_images.sh \
+	--originals deploy@example.com:/var/www/blog/media-originals/posts/ \
+	--processed deploy@example.com:/var/www/blog/public/images/posts/
+
+bin/process_rsync_images.sh \
+	--originals deploy@example.com:/var/www/blog/media-originals/posts/ \
+	--processed deploy@example.com:/var/www/blog/public/images/posts/ \
+	--apply
+```
+
+Pass `--skip-process` if you already ran `php bin/process_images.php` and only want to sync.
