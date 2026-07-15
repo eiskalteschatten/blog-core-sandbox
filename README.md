@@ -20,7 +20,7 @@ All commands are run from the project root.
 Original source images are stored in `media-originals/posts/YYYY/MM/{slug}/` and are excluded from git.
 The image processing command reads from this directory and writes generated WebP files to `public/images/posts/{slug}/`.
 
-## Syncing Media Originals to Server
+## Syncing Media to Server
 
 Use the helper script to deploy originals separately from git:
 
