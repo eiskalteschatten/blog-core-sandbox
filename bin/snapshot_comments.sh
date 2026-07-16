@@ -15,14 +15,14 @@ while IFS= read -r line; do
   [[ -n "$line" ]] && changed_files+=("$line")
 done < <(
   {
-    git diff --name-only -- ':(glob)posts/**/comments-local.json'
-    git diff --cached --name-only -- ':(glob)posts/**/comments-local.json'
-    git ls-files --others --exclude-standard -- 'posts/**/comments-local.json'
+    git diff --name-only -- ':(glob)posts/**/comments.json'
+    git diff --cached --name-only -- ':(glob)posts/**/comments.json'
+    git ls-files --others --exclude-standard -- 'posts/**/comments.json'
   } | sort -u
 )
 
 if [[ ${#changed_files[@]} -eq 0 ]]; then
-  echo "No comment snapshot changes found under posts/**/comments-local.json"
+  echo "No comment snapshot changes found under posts/**/comments.json"
   exit 0
 fi
 

@@ -14,7 +14,7 @@ All commands are run from the project root.
 | `composer run process-images` | Resizes and converts post images to WebP using the Imagick extension. Pass `-v` for verbose output. |
 | `composer run build-process-images -- -v` | Runs build index, then processes post images in one command. |
 | `composer run publish-assets` | Creates a symlink from `public/blog-core` to the core package's `assets/` directory. |
-| `composer run snapshot-comments [-- "message"]` | Interactively snapshots changed `posts/**/comments-local.json` files into a Git commit. |
+| `composer run snapshot-comments [-- "message"]` | Interactively snapshots changed `posts/**/comments.json` files into a Git commit. |
 | `composer run rsync-media-originals -- <user@host:/path/to/media-originals/posts/> [--apply]` | Syncs local media originals to a server with `rsync` (dry-run by default). |
 | `composer run rsync-processed-images -- <user@host:/path/to/public/images/posts/> [--apply]` | Syncs processed WebP images to a server with `rsync` (dry-run by default). |
 | `composer run process-rsync-images -- --originals <user@host:/path/to/media-originals/posts/> --processed <user@host:/path/to/public/images/posts/> [--apply] [--skip-process]` | Runs image processing, then syncs originals and processed images in one command. |
@@ -71,7 +71,7 @@ Any flags are passed to both underlying commands.
 
 ## Comment Snapshots
 
-When users submit comments, they are stored in `posts/**/comments-local.json`.
+When users submit comments, they are stored in `posts/**/comments.json`.
 To preserve those changes in Git without auto-committing from the app, use the interactive snapshot helper:
 
 ```bash
@@ -79,4 +79,4 @@ composer run snapshot-comments
 composer run snapshot-comments -- "comments snapshot 2026-07-16"
 ```
 
-The script only stages changed `comments-local.json` files, shows a summary, and asks for confirmation before creating a commit.
+The script only stages changed `comments.json` files, shows a summary, and asks for confirmation before creating a commit.
