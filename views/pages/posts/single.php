@@ -60,6 +60,9 @@ $commentAction = rtrim((string)$config->getRoutePrefix(), '/') . '/posts/' . raw
 
         <form method="post" action="<?= htmlspecialchars($commentAction) ?>" style="margin-bottom: 1.25rem;">
             <input type="hidden" name="_csrf" value="<?= htmlspecialchars((string)$commentCsrfToken) ?>">
+            <p style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+                <input id="comment-hp" name="comment_hp" type="text" tabindex="-1" autocomplete="off">
+            </p>
 
             <p>
                 <label for="comment-author">Name</label><br>
