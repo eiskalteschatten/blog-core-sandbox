@@ -7,3 +7,4 @@ public/blog-core
 public/images/posts
 media-originals/
 .DS_Store
+*.lock
