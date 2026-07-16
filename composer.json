@@ -25,6 +25,7 @@
         "build-index": "php bin/build_index.php",
         "process-images": "php bin/process_images.php",
         "publish-assets": "php bin/publish_assets.php",
-        "import-wordpress": "php bin/import_wordpress.php"
+        "import-wordpress": "php bin/import_wordpress.php",
+        "snapshot-comments": "bash bin/snapshot_comments.sh"
     }
 }

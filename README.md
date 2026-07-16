@@ -13,6 +13,7 @@ All commands are run from the project root.
 | `php bin/process_images.php` | Resizes and converts post images to WebP using the Imagick extension. Pass `-v` for verbose output. |
 | `bin/build_process_images.sh [-v]` | Runs build index, then processes post images in one command. |
 | `php bin/publish_blogcore_assets.php` | Creates a symlink from `public/blog-core` to the core package's `assets/` directory. Pass `-v` for verbose output. |
+| `composer run snapshot-comments [-- "message"]` | Interactively snapshots changed `posts/**/comments-local.json` files into a Git commit. |
 | `bin/rsync_media_originals.sh <user@host:/path/to/media-originals/posts/> [--apply]` | Syncs local media originals to a server with `rsync` (dry-run by default). |
 | `bin/rsync_processed_images.sh <user@host:/path/to/public/images/posts/> [--apply]` | Syncs processed WebP images to a server with `rsync` (dry-run by default). |
 | `bin/process_rsync_images.sh --originals <user@host:/path/to/media-originals/posts/> --processed <user@host:/path/to/public/images/posts/> [--apply] [--skip-process]` | Runs image processing, then syncs originals and processed images in one command. |
@@ -66,3 +67,15 @@ bin/build_process.sh -v
 ```
 
 Any flags are passed to both underlying commands.
+
+## Comment Snapshots
+
+When users submit comments, they are stored in `posts/**/comments-local.json`.
+To preserve those changes in Git without auto-committing from the app, use the interactive snapshot helper:
+
+```bash
+composer run snapshot-comments
+composer run snapshot-comments -- "comments snapshot 2026-07-16"
+```
+
+The script only stages changed `comments-local.json` files, shows a summary, and asks for confirmation before creating a commit.
