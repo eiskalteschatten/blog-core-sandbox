@@ -6,9 +6,11 @@
 /** @var \BlogCore\Core\Config $config */
 /** @var array|null $commentFormErrors */
 /** @var array|null $commentFormOld */
+/** @var string|null $commentCsrfToken */
 $pageTitle = $post['title'];
 $commentFormErrors = $commentFormErrors ?? [];
 $commentFormOld = $commentFormOld ?? [];
+$commentCsrfToken = $commentCsrfToken ?? '';
 $commentPosted = (string)($_GET['comment'] ?? '') === 'posted';
 $commentAction = rtrim((string)$config->getRoutePrefix(), '/') . '/posts/' . rawurlencode((string)$post['slug']) . '/comments#comments';
 ?>
@@ -57,6 +59,8 @@ $commentAction = rtrim((string)$config->getRoutePrefix(), '/') . '/posts/' . raw
         <?php endif ?>
 
         <form method="post" action="<?= htmlspecialchars($commentAction) ?>" style="margin-bottom: 1.25rem;">
+            <input type="hidden" name="_csrf" value="<?= htmlspecialchars((string)$commentCsrfToken) ?>">
+
             <p>
                 <label for="comment-author">Name</label><br>
                 <input
