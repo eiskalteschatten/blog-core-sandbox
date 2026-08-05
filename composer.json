@@ -27,7 +27,7 @@
         "import-wordpress-xml": "php bin/import_wordpress_xml.php",
         "process-images": "php bin/process_images.php",
         "process-rsync-images": "bash bin/process_rsync_images.sh",
-        "publish-assets": "php bin/publish_blogcore_assets.php",
+        "publish-blogcore-assets": "php bin/publish_blogcore_assets.php",
         "rsync-media-originals": "bash bin/rsync_media_originals.sh",
         "rsync-processed-images": "bash bin/rsync_processed_images.sh",
         "snapshot-comments": "bash bin/snapshot_comments.sh"
